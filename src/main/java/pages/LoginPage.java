@@ -1,13 +1,8 @@
 package pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import utils.enums.NavigationBar;
 
 public class LoginPage extends AbstractPage {
 	
@@ -18,7 +13,6 @@ public class LoginPage extends AbstractPage {
 	}
 	
 	public void clickOnCloseButton() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(closeBtn))).click();
+		getWait().until(ExpectedConditions.elementToBeClickable(By.xpath(closeBtn))).click();
 	}
 }
